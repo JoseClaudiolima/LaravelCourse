@@ -23,6 +23,10 @@
         .link{
             @apply font-bold text-blue-700 underline;
         }
+
+        .btn{
+            @apply border border-black p-1.5 rounded-lg;
+        }
     </style>
 </head>
 <body>

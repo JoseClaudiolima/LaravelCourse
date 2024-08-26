@@ -22,14 +22,24 @@
             <p class='text-red-500 mt-3'> Uncompleted </p>
         @endif
         
+        <div class='mt-5 flex gap-5'>
+            <a href="#" class='btn'>Edit</a>
         <form action="{{route('tasks.toggle-completed', ['task' => $task])}}" method="post">
             @csrf
             @method('PUT')
-            
-            <button>
+            <button class='btn'>
                 {{$task->completed ? 'Mark as Uncompleted' : 'Mark as Completed'}}
             </button>
+
+            <form action="{{route('tasks.delete', ['task' => $task])}}" method="post">
+                @csrf
+                @method('DELETE')
+                <button class="btn">
+                    DELETE
+                </button>
+            </form>
         </form>
+        </div>
     </div>
 
 

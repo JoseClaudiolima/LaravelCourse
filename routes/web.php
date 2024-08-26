@@ -24,3 +24,10 @@ Route::put('tasks/{task}', function (Task $task){
         'task' => $task
     ]);
 })->name('tasks.toggle-completed');
+
+
+Route::delete('tasks/{task}', function(Task $task) {
+    $task->delete();
+
+    return redirect()->route('tasks.index');
+})->name('tasks.delete');
