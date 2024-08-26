@@ -30,14 +30,13 @@
             <button class='btn'>
                 {{$task->completed ? 'Mark as Uncompleted' : 'Mark as Completed'}}
             </button>
-
-            <form action="{{route('tasks.delete', ['task' => $task])}}" method="post">
-                @csrf
-                @method('DELETE')
-                <button class="btn">
-                    DELETE
-                </button>
-            </form>
+        </form>
+        <form action="{{route('tasks.delete', ['task' => $task])}}" method="post">
+            @csrf
+            @method('DELETE')
+            <button class="btn">
+                DELETE
+            </button>
         </form>
         </div>
     </div>

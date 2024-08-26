@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use \App\Models\Task;
+use App\Http\Requests\TaskRequest;
+
 
 
 Route::get('/', function () {
@@ -9,6 +11,8 @@ Route::get('/', function () {
         'tasks' => Task::latest()->paginate()
     ]);
 })->name('tasks.index');
+
+Route::view('tasks/create', 'create')->name('tasks.create');
 
 Route::get('/tasks/{task}', function (Task $task){
     return view('show', [
@@ -31,3 +35,12 @@ Route::delete('tasks/{task}', function(Task $task) {
 
     return redirect()->route('tasks.index');
 })->name('tasks.delete');
+
+
+Route::post('/tasks', function(TaskRequest $request){
+    $data = $request->validated();
+
+    $task = Task::create($data);
+
+    return redirect()->route('tasks.index');
+})->name('tasks.store');

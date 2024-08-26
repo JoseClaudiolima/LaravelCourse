@@ -27,6 +27,19 @@
         .btn{
             @apply border border-black p-1.5 rounded-lg;
         }
+
+        .input-border{
+            @apply flex flex-col;
+        }
+
+        .input-text{
+            @apply  border  border-gray-200 indent-2 p-2 mb-5;
+        }
+
+        textarea{
+            @apply border  border-gray-200 resize-none h-40 mb-5 indent-2 p-2;
+        }
+
     </style>
 </head>
 <body>

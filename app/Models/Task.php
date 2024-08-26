@@ -9,7 +9,7 @@ class Task extends Model
 {
     use HasFactory;
 
-    
+    protected $fillable = ['title', 'description'];    
 
     public function toggle_completed(){
         $this->completed = !$this->completed;

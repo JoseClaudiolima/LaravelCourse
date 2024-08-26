@@ -6,7 +6,7 @@
 @section('content')
 
 <div>
-    <a href="#" class='link'>Create</a>
+    <a href="{{route('tasks.create')}}" class='link'>Create</a>
 </div>
     
 <div class='mt-5'>
