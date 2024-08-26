@@ -33,11 +33,15 @@
         }
 
         .input-text{
-            @apply  border  border-gray-200 indent-2 p-2 mb-5;
+            @apply indent-2 p-2 mb-5;
         }
 
         textarea{
-            @apply border  border-gray-200 resize-none h-40 mb-5 indent-2 p-2;
+            @apply resize-none h-40 mb-5 indent-2 p-2;
+        }
+
+        .error{
+            @apply text-red-900 bg-red-400 mb-5 w-fit p-2 rounded-lg;
         }
 
     </style>
