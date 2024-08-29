@@ -52,7 +52,9 @@
         <h1>@yield('title')</h1>
 
         @if (session()->has('success'))
-            <div>{{session('success')}}</div>
+            <div class='bg-green-300 text-green-800 rounded-lg indent-3 p-2 h-20 w-1/2 flex items-center text-center'>
+                {{session('success')}}
+            </div>
         @endif
 
         <div class='mt-5'>@yield('content')</div>

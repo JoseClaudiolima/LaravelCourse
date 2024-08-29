@@ -3,7 +3,7 @@
 @section('title', 'Create a new Task')
 
 @section('content')
-    <form action="{{ROUTE('tasks.store')}}" method="post">
+    <form action="{{route('tasks.store')}}" method="post">
         @csrf
         <div class='input-border'>
             <label for="title">Title:</label>
@@ -28,7 +28,7 @@
         @enderror
          
         <div class='flex gap-4'>
-            <input type="submit" value="Add Task" class='btn'>
+            <input type="submit" value="Add Task" class='btn hover:cursor-pointer'>
             <a href="{{route('tasks.index')}}" class='btn'>Cancel</a>
         </div>
     </form>

@@ -33,7 +33,7 @@ Route::post('/tasks', function(TaskRequest $request){
 
     $task = Task::create($data);
 
-    return redirect()->route('tasks.index');
+    return redirect()->route('tasks.index')->with('success', 'Task created successfully!');
 })->name('tasks.store');
 
 
@@ -51,9 +51,7 @@ Route::put('tasks/{task}', function(Task $task, TaskRequest $request){
 
     $task->update($data);
 
-    return redirect()->route('tasks.show', [
-        'task' => $task
-    ]);
+    return redirect()->route('tasks.index')->with('success', 'Edited Task with success!');
 })->name('tasks.update');
 
 

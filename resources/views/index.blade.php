@@ -21,7 +21,7 @@
     @endforeach
 </div>
 
-<nav>
+<nav class='w-[440px]'>
     {{$tasks->links()}}
 </nav>
 

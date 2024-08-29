@@ -31,7 +31,7 @@
     @enderror
      
     <div class='flex gap-4'>
-        <input type="submit" value="Add Task" class='btn'>
+        <input type="submit" value="Add Task" class='btn hover:cursor-pointer'>
         <a href="{{route('tasks.index')}}" class='btn'>Cancel</a>
     </div>
 </form>
