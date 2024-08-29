@@ -23,7 +23,7 @@
         @endif
         
         <div class='mt-5 flex gap-5'>
-            <a href="#" class='btn'>Edit</a>
+            <a href="{{route('tasks.edit', ['task' => $task])}}" class='btn'>Edit</a>
         <form action="{{route('tasks.toggle-completed', ['task' => $task])}}" method="post">
             @csrf
             @method('PUT')

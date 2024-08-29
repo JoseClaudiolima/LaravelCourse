@@ -21,7 +21,7 @@
             <label for="description">Description:</label>
             <textarea name="description" id="description"
             @class(['border  border-gray-200' => !$errors->has('description'),
-             'border border-red-600' => $errors->has('description')])></textarea>
+             'border border-red-600' => $errors->has('description')])>{{$task->description ?? old('description')}}</textarea>
         </div>
         @error('description')
             <p class='error'>{{$message}}</p>
